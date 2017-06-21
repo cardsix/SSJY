@@ -157,6 +157,7 @@ var AG_removeParent = function(el, fn) { while (el && el.parentNode) { if (fn(el
 					
 					<span data-state ="3" onclick="choicetype(this)">待收货</span>
 					<span data-state = "4" onclick="choicetype(this)">待评价</span>
+					<span data-state = "5" onclick="choicetype(this)">售后订单</span>
 				</div>
 				<div class="rch_right">
 					<input id="searchOrder" type="" name="" id="" value="" placeholder="输入订单号或商品名称" /><span id="startSearch">
@@ -477,35 +478,7 @@ var AG_removeParent = function(el, fn) { while (el && el.parentNode) { if (fn(el
 			var r = window.location.search.substr(1).match(reg); 
 			if (r!=null) return unescape(r[2]); return null;
 		}
-		$(function(){
-			var totalPage = 50;
-			var totalRecords = 390;
-			var pageNo = getParameter('pno');
-			if(!pageNo){
-				pageNo = 1;
-			}
-			//生成分页
-			page.generPageHtml({
-				pno : pageNo,
-				//总页码
-				total : totalPage,
-				//总数据条数
-				totalRecords : totalRecords,
-				//链接前部
-				hrefFormer : 'pager_test_orange_color',
-				isGoPage 			: false,	//是否显示页码跳转输入框
-				isShowLastPageBtn	: true, //是否显示尾页按钮	
-				isWrapedPageBtns	: false,	//是否用span包裹住页码按钮
-				isWrapedInfoTextAndGoPageBtn : false, //是否用span包裹住分页信息和跳转按钮
-				isShowCurrPage		: false,//是否显示当前页
-				isShowTotalPage 	: false, //是否显示总页数
-				//链接尾部
-				hrefLatter : '.html',
-				getLink : function(n){
-					return this.hrefFormer + this.hrefLatter + "?pno="+n;
-				}
-			})	
-		})
+		
 		var delectit =document.getElementsByClassName('delectit');
 		for(var k in delectit){
 			delectit[k].onclick=function(){

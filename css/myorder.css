@@ -393,7 +393,7 @@ li{
     cursor: pointer;
 
     font-family: "arial black";
-    width: 130px;
+    width: 112px;
     letter-spacing: 2px;
     vertical-align: middle;
     height: 22px;
@@ -413,6 +413,7 @@ li{
 #searchOrder{
 	height: 30px;
 	width: 260px;
+	margin-left: 22px;
 	/*float: left;*/
 }
 #startSearch{
