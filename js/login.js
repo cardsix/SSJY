@@ -85,7 +85,7 @@ document.onkeydown=function(){
 								window.location.href = "../index.html";
 							}
 						}else{
-							$('.pas').css("display","block");
+							$('.pas').css("display","block"); 
 						}
 						
 					},error:function(err){
